@@ -16,6 +16,7 @@ class CrmLead(models.Model):
         ],
         default="none",
         tracking=True,
+        copy=False,
         readonly=True,
     )
     to_be_approved = fields.Boolean(
