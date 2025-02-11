@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 17.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-01-16 21:00+0000\n"
-"PO-Revision-Date: 2025-01-16 21:00+0000\n"
+"POT-Creation-Date: 2025-02-11 01:32+0000\n"
+"PO-Revision-Date: 2025-02-11 01:32+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -21,8 +21,8 @@ msgid ""
 "Allow opportunities to proceed through the approval process with these CRM "
 "Tags."
 msgstr ""
-"Permettre aux opportunités de passer dans le processus d'approbation "
-"grâce à ces étiquettes."
+"Permettre aux opportunités de passer dans le processus d'approbation grâce à"
+" ces étiquettes."
 
 #. module: crm_lead_approval
 #: model:ir.actions.act_window,name:crm_lead_approval.action_crm_approval_wizard
@@ -57,6 +57,11 @@ msgid "Approve/Refuse"
 msgstr "Approuver/Refuser"
 
 #. module: crm_lead_approval
+#: model_terms:ir.ui.view,arch_db:crm_lead_approval.view_crm_case_opportunity_approval_filter
+msgid "Approved"
+msgstr "Approuvé"
+
+#. module: crm_lead_approval
 #: model:ir.model,name:crm_lead_approval.model_crm_approval_wizard
 msgid "CRM Approval Wizard"
 msgstr ""
@@ -84,12 +89,12 @@ msgstr ""
 #. module: crm_lead_approval
 #: model:ir.model,name:crm_lead_approval.model_res_company
 msgid "Companies"
-msgstr ""
+msgstr "Sociétés"
 
 #. module: crm_lead_approval
 #: model:ir.model,name:crm_lead_approval.model_res_config_settings
 msgid "Config Settings"
-msgstr ""
+msgstr "Paramètres de configuration"
 
 #. module: crm_lead_approval
 #: model:ir.model.fields,field_description:crm_lead_approval.field_crm_approval_wizard__create_uid
@@ -118,8 +123,8 @@ msgid ""
 "Enable these Sales Teams to provide their approval in the opportunities "
 "assigned to them."
 msgstr ""
-"Permettre à ces équipes commerciales de donner leur approbation dans "
-"les opportunités qui leur sont assignées."
+"Permettre à ces équipes commerciales de donner leur approbation dans les "
+"opportunités qui leur sont assignées."
 
 #. module: crm_lead_approval
 #: model:ir.model.fields,field_description:crm_lead_approval.field_crm_approval_wizard__id
@@ -128,10 +133,8 @@ msgstr ""
 
 #. module: crm_lead_approval
 #: model:ir.model.fields,help:crm_lead_approval.field_crm_lead__to_be_approved
-msgid ""
-"Indicates whether the record required approval or not"
-msgstr ""
-"Indique si l'enregistrement nécessite une approbation ou pas"
+msgid "Indicates whether the record required approval or not"
+msgstr "Indique si l'enregistrement nécessite une approbation ou pas"
 
 #. module: crm_lead_approval
 #: model:ir.model.fields,field_description:crm_lead_approval.field_crm_approval_wizard__write_uid
@@ -146,7 +149,7 @@ msgstr ""
 #. module: crm_lead_approval
 #: model:ir.model,name:crm_lead_approval.model_crm_lead
 msgid "Lead/Opportunity"
-msgstr ""
+msgstr "Piste/Demande"
 
 #. module: crm_lead_approval
 #: model:ir.model.fields.selection,name:crm_lead_approval.selection__crm_lead__approval__none
@@ -156,12 +159,27 @@ msgstr "Aucun"
 #. module: crm_lead_approval
 #: model:ir.model.fields,field_description:crm_lead_approval.field_crm_approval_wizard__approval_comment
 msgid "Observation"
-msgstr "Observation"
+msgstr ""
+
+#. module: crm_lead_approval
+#: model_terms:ir.ui.view,arch_db:crm_lead_approval.view_crm_case_opportunity_approval_filter
+msgid "Opportunities that are not yet reviewed"
+msgstr ""
+
+#. module: crm_lead_approval
+#: model_terms:ir.ui.view,arch_db:crm_lead_approval.view_crm_case_opportunity_approval_filter
+msgid "Opportunities that are refused"
+msgstr ""
 
 #. module: crm_lead_approval
 #: model:ir.model.fields,field_description:crm_lead_approval.field_crm_approval_wizard__lead_id
 msgid "Opportunity"
-msgstr "Opportunité"
+msgstr "Demande"
+
+#. module: crm_lead_approval
+#: model_terms:ir.ui.view,arch_db:crm_lead_approval.view_crm_case_opportunity_approval_filter
+msgid "Refused"
+msgstr "Refusé"
 
 #. module: crm_lead_approval
 #: model:ir.model.fields.selection,name:crm_lead_approval.selection__crm_lead__approval__normal
@@ -178,3 +196,8 @@ msgstr ""
 #: model:ir.model.fields,field_description:crm_lead_approval.field_crm_lead__to_be_approved
 msgid "To be approved"
 msgstr "À approuver"
+
+#. module: crm_lead_approval
+#: model_terms:ir.ui.view,arch_db:crm_lead_approval.view_crm_case_opportunity_approval_filter
+msgid "Unreviewed"
+msgstr "Pas encore d'avis"

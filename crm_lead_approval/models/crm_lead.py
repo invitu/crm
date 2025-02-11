@@ -1,7 +1,7 @@
 # Copyright 2024 INVITU SARL
 # License AGPL-3 or later (https://www.gnu.org/licenses/agpl.html).
 
-from odoo import fields, models
+from odoo import fields, models, api
 
 
 class CrmLead(models.Model):
@@ -22,9 +22,11 @@ class CrmLead(models.Model):
     to_be_approved = fields.Boolean(
         string="To be approved",
         compute="_compute_to_be_approved",
+        store=True,
         help="Indicates whether the record required approval or not",
     )
 
+    @api.depends('team_id', 'tag_ids')
     def _compute_to_be_approved(self):
         for record in self:
             record.to_be_approved = (

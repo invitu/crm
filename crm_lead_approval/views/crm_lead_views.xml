@@ -60,4 +60,32 @@
             </xpath>
         </field>
     </record>
+    <record id="view_crm_case_opportunity_approval_filter" model="ir.ui.view">
+        <field name="name">view.crm.case.opportunity.approval.filter</field>
+        <field name="model">crm.lead</field>
+        <field name="inherit_id" ref="crm.view_crm_case_opportunities_filter" />
+        <field name="priority" eval="100" />
+        <field name="arch" type="xml">
+            <filter name="unassigned" position="after">
+                <filter
+                    string="Unreviewed"
+                    name="unreviewed"
+                    domain="[('approval', '=', 'none'), ('to_be_approved', '=', True), ('type', '=', 'opportunity')]"
+                    help="Opportunities that are not yet reviewed"
+                />
+                <filter
+                    string="Approved"
+                    name="approved"
+                    domain="[('approval', '=', 'done'), ('to_be_approved', '=', True), ('type', '=', 'opportunity')]"
+                    help="Opportunities that are refused"
+                />
+                <filter
+                    string="Refused"
+                    name="refused"
+                    domain="[('approval', '=', 'blocked'), ('to_be_approved', '=', True), ('type', '=', 'opportunity')]"
+                    help="Opportunities that are refused"
+                />
+            </filter>
+        </field>
+    </record>
 </odoo>
